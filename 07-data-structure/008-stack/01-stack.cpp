@@ -17,7 +17,7 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
 
-  // push(value) => 해당 value를 스택에 추가
+  // 📌 push(value) => 해당 value를 스택에 추가
   stk.push("엄");
   stk.push("준");
   stk.push("식");
@@ -25,15 +25,15 @@ int main() {
   stk.push("이");
   stk.push("팅");
 
-  // pop() => 가장 마지막에 추가한 요소를 지움
+  // 📌 pop() => 가장 마지막에 추가한 요소를 지움
   while (stk.size()) {
     cout << stk.top() << "\n";
     stk.pop();
   }
 
   /** cf
-   * top()  => 가장 마지막에 있는 요소를 참조 (가장 위에 있다고도 합니다.)
-   * size() => 스택의 크기
+   * 📌 top()  => 가장 마지막에 있는 요소를 참조 (가장 위에 있다고도 합니다.)
+   * 📌 size() => 스택의 크기
    */
 }
 /*
