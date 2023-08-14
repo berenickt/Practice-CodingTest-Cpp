@@ -37,7 +37,9 @@ vector<string> split(string input, string delimiter) {
 int main() {
   string s = "안녕하세요 큰돌이는 킹갓제너럴 천재입니다 정말이에요!", d = " ";
   vector<string> a = split(s, d);
-  for (string b : a) cout << b << "\n";
+  for (string b : a) {
+    cout << b << "\n";
+  }
 }
 /*
 안녕하세요

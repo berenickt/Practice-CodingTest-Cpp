@@ -1,42 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n = 5, k = 3, a[5] = {1, 2, 3, 4, 5};
+vector<string> split(string input, string delimiter) {
+  vector<string> ret;
+  long long pos = 0;
+  string token = "";
 
-void print(vector<int> b) {
-  for (int i : b) {
-    cout << i << " ";
+  while ((pos = input.find(delimiter)) != string::npos) {
+    token = input.substr(0, pos);
+    ret.push_back(token);
+    input.erase(0, pos + delimiter.length());
   }
-  cout << '\n';
-}
-
-void combi(int start, vector<int> b) {
-  if (b.size() == k) {
-    print(b);
-    return;
-  }
-  for (int i = start + 1; i < n; i++) {
-    b.push_back(i);
-    combi(i, b);
-    b.pop_back();
-  }
-  return;
+  ret.push_back(input);
+  return ret;
 }
 
 int main() {
-  vector<int> b;
-  combi(-1, b);
-  return 0;
+  string s = "안녕하세요 큰돌이는 킹갓제너럴 천재입니다 정말이에요!", d = " ";
+  vector<string> a = split(s, d);
+  for (string b : a)
+    cout << b << "\n";
 }
 /*
-0 1 2
-0 1 3
-0 1 4
-0 2 3
-0 2 4
-0 3 4
-1 2 3
-1 2 4
-1 3 4
-2 3 4
+안녕하세요
+큰돌이는
+킹갓제너럴
+천재입니다
+정말이에요!
 */
