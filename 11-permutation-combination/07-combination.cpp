@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// **** 조합(combination)
 int n = 5, k = 3, a[5] = {1, 2, 3, 4, 5};
-
 void print(vector<int> b) {
   for (int i : b) {
     cout << i << " ";
